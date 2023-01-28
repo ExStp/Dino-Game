@@ -1,0 +1,106 @@
+
+@keyframes cactusMov {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+
+
+.game-wrapper {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#new_game_but {
+    background-color: #4e4e4e; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#new_game_but:hover {
+    background-color: #707070;
+    color: white;
+    box-shadow: 0px 3px 6px 0px #0000004d;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/pngegg.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(/img/cactusBig0000.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+}
+
+#cactus.active {
+    animation: cactusMov 1s infinite linear;
+}
+
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+#game_message {
+    display: none;
+    position: absolute;
+    font-size: large;
+}
+
+#game_message.active {
+    display: block;
+}
+
+.record-mes {
+    position: absolute;
+}
+
+.record-mes * {
+    margin: 0;
+    display: inline;
+}
