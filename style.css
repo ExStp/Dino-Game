@@ -35,6 +35,7 @@
     justify-content: center;
     align-items: center;
     height: 300px;
+    overflow: hidden;
 }
 
 #new_game_but {
